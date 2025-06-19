@@ -280,3 +280,56 @@
 .input-container button:hover {
   background-color: #4b4dc2;
 }
+
+@media (max-width: 600px) {
+  .chat-window-wrapper {
+    bottom: 10px;
+    right: 10px;
+    width: 95vw !important; /* forzăm să ocupe majoritatea lățimii */
+    height: 70vh !important;
+    min-width: unset;
+    min-height: unset;
+    max-width: unset;
+    max-height: unset;
+    border-radius: 8px;
+  }
+
+  .chat-toggle-button {
+    bottom: 15px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .chat-header {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 12px;
+  }
+
+  .message {
+    font-size: 13px;
+    max-width: 80%;
+  }
+
+  .input-container textarea {
+    font-size: 13px;
+    max-height: 70px;
+  }
+
+  .input-container button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .bot-avatar {
+    width: 28px;
+    height: 28px;
+  }
+
+  .resize-handle {
+    display: none; 
+  }
+}

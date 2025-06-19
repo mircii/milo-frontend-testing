@@ -66,6 +66,21 @@ function App() {
     }
   }, [conversation]);
 
+  useEffect(() => {
+  const updateSize = () => {
+    if (window.innerWidth < 600) {
+      setSize({ width: window.innerWidth * 0.95, height: window.innerHeight * 0.7 });
+    } else {
+      setSize({ width: 500, height: 600 });
+    }
+  };
+
+  updateSize();
+
+  window.addEventListener('resize', updateSize);
+  return () => window.removeEventListener('resize', updateSize);
+}, []);
+
   const onMouseDown = (e) => {
     e.preventDefault();
     setIsResizing(true);
@@ -74,6 +89,7 @@ function App() {
 
   const onMouseMove = useCallback((e) => {
     if (!isResizing) return;
+    if (window.innerWidth < 600) return;
     const dx = lastMousePos.current.x - e.clientX;
     const dy = lastMousePos.current.y - e.clientY;
 
