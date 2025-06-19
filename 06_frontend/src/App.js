@@ -265,7 +265,7 @@ function App() {
               placeholder="Scrie un mesaj..."
               rows={1}
             />
-            <button onClick={sendMessage}><span className="arrow-icon">➤</span></button>
+            <button onClick={() => sendMessage(inputText)}><span className="arrow-icon">➤</span></button>
           </div>
           )}
         </motion.div>
