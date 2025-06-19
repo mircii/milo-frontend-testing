@@ -32,31 +32,46 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        width: 90vw;
         max-width: 600px;
-        padding: 2rem;
+        padding: 2rem 1rem;
         background: rgba(106, 92, 219, 0.05);
         border: 2px dashed #6a5cdb;
         border-radius: 16px;
         color: #333;
         font-family: 'Segoe UI', sans-serif;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        box-sizing: border-box;
       }
 
-    .background-info h1 {
+      .background-info h1 {
         color: #6a5cdb;
         font-size: 2rem;
         margin-bottom: 1rem;
       }
 
-    .background-info p {
+      .background-info p {
         font-size: 1.1rem;
         margin: 0.5rem 0;
         line-height: 1.6;
       }
 
-    .background-info strong {
+      .background-info strong {
         color: #e78147;
       }
+
+      @media (max-width: 480px) {
+        .background-info {
+          padding: 1.5rem 1rem;
+        }
+        .background-info h1 {
+          font-size: 1.5rem;
+        }
+        .background-info p {
+          font-size: 1rem;
+        }
+      }
+
 
     </style>
   </head>
